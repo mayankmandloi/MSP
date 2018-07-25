@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,td,th
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&&</td>
+                <td>AND</td>
+                <td>Both condition must be true (a>5 && a<10) for final result to be true </10></td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>OR</td>
+                <td>Any one condition can be true for final result to be true </td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>NOT</td>
+                <td> it just reverse the value</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+    var a=0;
+    var b=10;
+    console.log(a>5 && a<15);
+    console.log(a>5 || a<15);
+    console.log(!(a>5));
+
+    </script>
+</body>
+</html>
