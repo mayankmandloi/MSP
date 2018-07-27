@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table,td,th{
+        /* border: 1px solid black;
+        border-collapse: collapse; */
+    }
+    td,th
+    {
+        text-align: center;
+        padding: 5px 2px;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" name="number" id="main">
+    <button onclick="table()">Show Table</button>
+    <p id="output"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Input</th>
+                <th>x</th>
+                <th>number</th>
+                <th>answer</th>
+            </tr>
+        </thead>
+        <tbody id="bodytable">
+
+        </tbody>
+    </table>
+    <script>
+    function table()
+    {
+        var x=1;
+        var input=1*document.getElementById("main").value;
+        while(x<11)
+        {
+            var out=input+" x "+x+" = "+input*x+"<br>";
+            document.getElementById("output").innerHTML=document.getElementById("output").innerHTML+out;
+           
+          
+        
+        var tableOutput="<tr>"
+        +"<td>"+input+"</td>"+
+        "<td>"+"*"+"</td>"+
+        "<td>"+x+"</td>"+
+        "<td>"+input*x+"</td>"+
+        "</tr>";
+        document.getElementById("bodytable").innerHTML+=tableOutput;
+        x=x+1;
+        }
+    }
+    </script>
+</body>
+</html>
