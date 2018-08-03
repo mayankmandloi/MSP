@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="main" onmousemove="west()">
+
+    </p>
+    <button onclick="test()">Show</button>
+    <script>
+    
+    var person={name:"Suresh",number:9876354345,age:24,getDetails:function(){
+        return "Hi I am "+this.name+" and my number is "+this.number;
+    }};
+    console.log("Hello I am "+person.name);
+
+    function test()
+    {
+        document.getElementById("main").innerHTML+=person["getDetails"]()+"<br>";
+    }
+
+    function west()
+    {
+        document.getElementById("main").innerHTML+="Hello I am "+person["name"]+" and my number is "+person["number"]+"<br>";
+    }
+    </script>
+</body>
+</html>
