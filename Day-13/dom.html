@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+    
+    <script>
+    var book = {"ID":1196558874,
+    "Title":"Head First JavaScript",
+    "SubTitle":"A Learner's Companion to JavaScript",
+    "Description":"Want to make the leap from writing HTML and CSS web pages and create dynamic web applications? Want to take your web skills to the next level? It sounds like you're ready to learn the Web's hottest programming language: JavaScript. Head First JavaScr ...",
+    "Image":"http://s.it-ebooks-api.info/3/head_first_javascript.jpg",
+    "isbn":"9780596527747"}
+
+    //document.getElementById("main").innerHTML="<h1>"+book.Title+"</h1>";
+    var heading= document.createElement("h1");
+    heading.innerHTML=book.Title;
+    heading.style.color="blue";
+    document.getElementById("main").appendChild(heading);
+
+    var image=document.createElement("img");
+    image.src=book.Image;
+    document.getElementById("main").appendChild(image);
+
+    var para=document.createElement("p");
+    para.innerHTML=book.Description;
+    document.getElementById("main").appendChild(para);
+
+    
+    </script>
+</body>
+</html>
