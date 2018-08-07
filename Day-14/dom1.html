@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="showMe(this)">Hello</p>
+    <p onclick="showMe(this)">I am </p>
+    <p onclick="showMe(this)">Mayank</p>
+    <p onclick="showMe(this)">from</p>
+    <p onclick="showMe(document.getElementById('main'))">Web Bhumi</p>
+
+    <p id="main">Hello World</p>
+
+    <script>
+    function showMe(ele)
+    {
+        console.log(ele.innerHTML)
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="createNewElement()">Click to add Element</button>
+
+    <div id="main">
+
+    </div>
+
+    <script>
+    function createNewElement()
+    {
+        var tag=window.prompt("enter tag name");
+        var element = document.createElement(tag);
+        element.innerHTML=window.prompt("Enter data for element");;
+        //element.contentEditable="true";
+        element.addEventListener("click",function(eve){
+            console.log(eve.target);
+            var element= eve.target;
+            element.style.color=window.prompt("Enter Color");
+        })
+
+        element.addEventListener("contextmenu",function(eve){
+            eve.target.remove();
+        })
+        document.getElementById("main").appendChild(element);
+
+    }
+    </script>
+</body>
+</html>
